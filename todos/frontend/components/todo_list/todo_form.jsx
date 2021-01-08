@@ -6,7 +6,7 @@ class TodoForm extends React.Component{
     }
 
     render(){
-
+        return <h1>HI</h1>
     }
 }
 
