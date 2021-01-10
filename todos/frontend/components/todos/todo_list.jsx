@@ -1,21 +1,35 @@
 // export default () => <h3>Todo List goes here!</h3>
 import React from 'react';
 import TodoListItem from "../todo_list/todo_list_item";
-import TodoFormContainer from "../../components/todo_list/todo_form_container"
+import TodoForm from "../todo_list/todo_form"
+// import TodoFormContainer from "../../components/todo_list/todo_form_container"
+
+
+
 class TodoList extends React.Component{
-    constructor(props){
+    constructor(props){ //todos: {}, receiveTodo: , removeTodo
+        // debugger
         super(props);
-        this.state = {todos: props.todos};
+        // this.state = {todos: props.todos};
         // debugger
     }
     render(){
+        // debugger
         return (
                 <div>
                     <ul>
-                    {this.state.todos.map((el) => 
-                    <TodoListItem key={el.id} todo={el}/>)}
+                    {this.props.todos.map((el) => {
+                        // debugger
+                    return  <TodoListItem key={el.id} 
+                                todo={el}
+                                receiveTodo={ this.props.receiveTodo }
+                                removeTodo={ this.props.removeTodo}
+                                />
+                            }
+                        )
+                    }
                     </ul>
-                    <TodoFormContainer/>
+                    <TodoForm receiveTodo= {this.props.receiveTodo} />
                 </div>
         )
              

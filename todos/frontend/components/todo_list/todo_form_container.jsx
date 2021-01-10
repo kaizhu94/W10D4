@@ -4,7 +4,7 @@ import TodoForm from "../todo_list/todo_form"
 import { receiveTodo } from "../../actions/todo_actions"
 
 
-  
+  //Not using this container, because we can just pass receiveTodo as a prop into TodoForm
   const mapDispatchToProps = dispatch => ({
     receiveTodo: todo => dispatch(receiveTodo(todo))
   });

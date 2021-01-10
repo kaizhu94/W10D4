@@ -17,3 +17,13 @@ export const receiveTodo = (todo) => {
         todo
     };
 }
+
+export const REMOVE_TODO = "REMOVE_TODO";
+
+export const removeTodo = (todo) => {
+    // debugger;
+    return {
+        type: REMOVE_TODO,
+        todo
+    }
+}

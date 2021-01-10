@@ -5,5 +5,6 @@ export const allTodos = ({todos}) =>{
     const array =  keys.map(key => {
         return todos[key];
     })
+    // debugger
     return array;
 }
